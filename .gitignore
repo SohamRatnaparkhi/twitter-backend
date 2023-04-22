@@ -1,7 +1,7 @@
-backend/readPost/node_modules
-backend/readPost/.env
-backend/readPost/dist/
+readPost/node_modules
+readPost/.env
+readPost/dist/
 
-backend/makePost/.env
-backend/makePost/node_modules/
-backend/makePost/dist/
+makePost/.env
+makePost/node_modules/
+makePost/dist/
