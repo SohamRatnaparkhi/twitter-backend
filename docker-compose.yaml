@@ -1,0 +1,19 @@
+version: '2'
+services:
+  make-post:
+    image: make-post:1.0.7
+    build:
+      context: makePost
+      dockerfile: Dockerfile
+    ports:
+      - 6001:6001
+    depends_on:
+      - read-post
+
+  read-post:
+    image: read-post:1.0.7
+    build:
+      context: readPost
+      dockerfile: Dockerfile
+    ports:
+      - 6000:6000

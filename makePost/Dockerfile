@@ -1,14 +1,16 @@
-FROM node:14
+ARG NODE_VERSION=19.3.0
 
-WORKDIR /app
+FROM node:${NODE_VERSION}-alpine
 
-COPY package*.json ./
+RUN ls -la
+
+COPY package.json ./
 
 RUN npm install
 
 COPY . .
+ENV Make_Post_PORT=6001
 
-EXPOSE 5000
-EXPOSE 5001
+EXPOSE 6001
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "start" ]
