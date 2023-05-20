@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: readpost-deployment
+spec:
+  replicas: 2  # Initial number of replicas
+  selector:
+    matchLabels:
+      app: readpost
+  template:
+    metadata:
+      labels:
+        app: readpost
+    spec:
+      containers:
+        - name: readpost
+          image: read-post:2.0.0
+          ports:
+            - containerPort: 6000

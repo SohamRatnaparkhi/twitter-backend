@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: makepost-deployment
+spec:
+  replicas: 2  # Initial number of replicas
+  selector:
+    matchLabels:
+      app: makepost
+  template:
+    metadata:
+      labels:
+        app: makepost
+    spec:
+      containers:
+        - name: makepost
+          image: make-post:2.0.0
+          ports:
+            - containerPort: 6001
