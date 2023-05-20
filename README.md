@@ -1,4 +1,5 @@
 
+```
 ├── docker-compose.yaml
 ├── haproxy.cfg
 ├── kubernetes
@@ -25,7 +26,7 @@
     ├── src
     └── tsconfig.json
 
-
+```
 Above is the folder structure of this repo.
 
 `./kubernetes` has files related to deployment of microservice on k8
