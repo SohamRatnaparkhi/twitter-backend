@@ -1,7 +1,7 @@
 version: '2'
 services:
   make-post:
-    image: make-post:1.0.7
+    image: make-post:2.0.0
     build:
       context: makePost
       dockerfile: Dockerfile
@@ -11,7 +11,7 @@ services:
       - read-post
 
   read-post:
-    image: read-post:1.0.7
+    image: read-post:2.0.0
     build:
       context: readPost
       dockerfile: Dockerfile
